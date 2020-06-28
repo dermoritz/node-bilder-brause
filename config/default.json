@@ -1,6 +1,6 @@
 {
     "server": {
-        "host": "zentrale",
+        "host": "localhost",
         "port": 3050,
         "rootURLPath": "v1",
         "frontendPath": "frontend/dist"
@@ -16,17 +16,17 @@
         "server": {
             "network": true,
             "protocol": "ws",
-            "host": "zentrale",
+            "host": "localhost",
             "port": 3055
         },
         "client": {
             "protocol": "ws",
-            "host": "zentrale",
+            "host": "localhost",
             "port": 3055,
             "reconnectIdle": 2000,
             "maxThreads": 1,
-            "imageSourceBaseURL": "http://zentrale:3050/v1/media/original",
-            "uploadBaseUrl": "http://zentrale:3050/v1/upload"
+            "imageSourceBaseURL": "http://localhost:3050/v1/media/original",
+            "uploadBaseUrl": "http://localhost:3050/v1/upload"
         }
     },
     "frontend": {
@@ -36,7 +36,7 @@
         "title": "Bilder"
     },
     "digger" : {
-        "thumbnailBaseURL": "http://zentrale:3050/v1/media",
+        "thumbnailBaseURL": "http://localhost:3050/v1/media",
         "thumbnailSizeKey": "i",
         "startIndex": 28000
     },

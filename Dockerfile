@@ -8,11 +8,12 @@ RUN apt-get update -y && apt-get install -y \
   tree
 
 # Bundle app source
-COPY ./* ./
-
+COPY . .
 RUN npm install
-
-RUN tree . 
+RUN npm run install:server
+RUN npm run install:generator
+RUN npm run install:frontend
+RUN npm install -g concurrently
 # Install app dependencies
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
 # where available (npm@5+)
@@ -24,4 +25,4 @@ RUN tree .
 
 EXPOSE 3050
 EXPOSE 3055
-CMD npm run server ; npm run generator
+CMD ["concurrently","npm:server", "npm:generator"]
