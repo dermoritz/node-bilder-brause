@@ -1,0 +1,2 @@
+docker build -t dermoritz/node-bilder-brause .
+docker run -p 7080:3050 -p 7081:3055 -v "C:\Users\moritz\entwicklung\projects\pics:/ext/wd4/storage/fotos" -v "C:\Users\moritz\entwicklung\projects\pics\thumbs:/ext/wd4/storage/gallery" -d seekwhencer/node-bilder-brause
