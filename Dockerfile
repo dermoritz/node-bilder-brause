@@ -24,4 +24,4 @@ RUN tree .
 
 EXPOSE 3050
 EXPOSE 3055
-CMD ["npm", "run server"]
+CMD npm run server ; npm run generator
